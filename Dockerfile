@@ -3,7 +3,7 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 COPY package.json .
-RUN npm install --production
+COPY app.js .
 
 # ===== STAGE 2: Runner (image final lebih kecil) =====
 FROM node:18-alpine
